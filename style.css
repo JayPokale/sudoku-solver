@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #181a2f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  gap: 32px;
+}
+
+.sudoku-container {
+  display: grid;
+  grid-template-columns: repeat(3, 50px) 5px repeat(3, 50px) 5px repeat(3, 50px);
+  grid-template-rows: repeat(3, 50px) 5px repeat(3, 50px) 5px repeat(3, 50px);
+  gap: 4px;
+}
+
+.cell {
+  height: 50px;
+  width: 50px;
+  border-radius: 4px;
+  background: #2b2a38;
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  caret-color: transparent;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-timing-function: ease-in-out;
+  transition-duration: 150ms;
+  cursor: pointer;
+}
+
+.cell:focus {
+  background: #00aeef;
+}
+
+.defaultcell {
+  border: 2px solid #00aeef;
+}
+
+.submit,
+.clear {
+  margin: 0 4px;
+  padding: 4px 12px;
+  width: 150px;
+  color: white;
+  font-size: large;
+  background: transparent;
+  border: 2px solid #00aeef;
+  border-radius: 6px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 100ms;
+  cursor: pointer;
+}
+
+.submit:active,
+.clear:active {
+  background: #00aeef;
+}
+
+.submit::before {
+  content: "Find Solution";
+}
+
+.clear::before {
+  content: "Clear";
+}
+
+.submit:disabled::before {
+  content: "Finding...";
+}
+.submit:disabled {
+  background: #00aeef;
+  cursor: not-allowed;
+}
