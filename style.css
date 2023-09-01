@@ -37,12 +37,16 @@ body {
   justify-content: center;
   align-items: center;
   transition-timing-function: ease-in-out;
-  transition-duration: 150ms;
+  transition-duration: 100ms;
   cursor: pointer;
 }
 
 .cell:focus {
   background: #00aeef;
+}
+
+.cell:hover {
+  background: rgba(43, 42, 56, 0.5);
 }
 
 .defaultcell {

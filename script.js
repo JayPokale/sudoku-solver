@@ -87,6 +87,9 @@ focusCell(0);
 // Navigation by arrow keys
 document.addEventListener("keydown", (e) => {
   switch (e.key) {
+    case "Tab":
+      ++activeCellIndex;
+      break;
     case "ArrowLeft":
       focusCell(activeCellIndex - 1);
       break;
