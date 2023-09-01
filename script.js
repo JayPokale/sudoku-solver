@@ -128,9 +128,11 @@ submitbtn.addEventListener("click", function () {
     return;
   }
   const solution = solve(grid);
-  for (let i = 0; i < 81; i++) {
-    if (!cells[i].innerText) {
-      cells[i].innerText = solution[Math.floor(i / 9)][i % 9];
+  if (solution) {
+    for (let i = 0; i < 81; i++) {
+      if (!cells[i].innerText) {
+        cells[i].innerText = solution[Math.floor(i / 9)][i % 9];
+      }
     }
   }
 
@@ -155,6 +157,7 @@ function solve(grid) {
   function dfs(cell) {
     if (cell === 81) {
       solution.push(grid.map((row) => [...row]));
+      console.log(grid);
       return;
     }
 
