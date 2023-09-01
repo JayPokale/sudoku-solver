@@ -157,9 +157,9 @@ function solve(grid) {
   function dfs(cell) {
     if (cell === 81) {
       solution.push(grid.map((row) => [...row]));
-      console.log(grid);
       return;
     }
+    if (solution.length > 1) return;
 
     const row = Math.floor(cell / 9);
     const col = cell % 9;
