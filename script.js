@@ -88,7 +88,7 @@ focusCell(0);
 document.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "Tab":
-      ++activeCellIndex;
+      if (activeCellIndex < 81) ++activeCellIndex;
       break;
     case "ArrowLeft":
       if (activeCellIndex % 9 === 0) activeCellIndex += 9;
