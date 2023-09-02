@@ -91,15 +91,19 @@ document.addEventListener("keydown", (e) => {
       ++activeCellIndex;
       break;
     case "ArrowLeft":
+      if (activeCellIndex % 9 === 0) activeCellIndex += 9;
       focusCell(activeCellIndex - 1);
       break;
     case "ArrowRight":
+      if (activeCellIndex % 9 === 8) activeCellIndex -= 9;
       focusCell(activeCellIndex + 1);
       break;
     case "ArrowUp":
+      if (activeCellIndex < 9) activeCellIndex += 81;
       focusCell(activeCellIndex - 9);
       break;
     case "ArrowDown":
+      if (activeCellIndex > 72) activeCellIndex -= 81;
       focusCell(activeCellIndex + 9);
       break;
     default:
