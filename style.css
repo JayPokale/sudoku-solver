@@ -70,8 +70,8 @@ body {
   cursor: pointer;
 }
 
-.submit:active,
-.clear:active {
+.submit:hover,
+.clear:hover {
   background: #00aeef;
 }
 
