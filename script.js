@@ -237,15 +237,15 @@ clearbtn.addEventListener("click", function () {
 });
 
 const temp = [
-  [null, null, null, 2, 6, null, 7, null, 1],
-  [6, 8, null, null, 7, null, null, 9, null],
-  [1, 9, null, null, null, 4, 5, null, null],
-  [8, 2, null, 1, null, null, null, 4, null],
-  [null, null, 4, 6, null, 2, 9, null, null],
-  [null, 5, null, null, null, 3, null, 2, 8],
-  [null, null, 9, 3, null, null, null, 7, 4],
-  [null, 4, null, null, 5, null, null, 3, 6],
-  [7, null, 3, null, 1, 8, null, null, null],
+  [0, 0, 0, 2, 6, 0, 7, 0, 1],
+  [6, 0, 0, 0, 7, 0, 0, 0, 0],
+  [0, 9, 0, 0, 0, 4, 5, 0, 0],
+  [0, 2, 0, 1, 0, 0, 0, 0, 0],
+  [0, 0, 4, 0, 0, 0, 9, 0, 0],
+  [0, 5, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 9, 3, 0, 0, 0, 0, 4],
+  [0, 0, 0, 0, 5, 0, 0, 0, 6],
+  [7, 0, 0, 0, 1, 8, 0, 0, 0],
 ];
 
 window.onload = () => {
